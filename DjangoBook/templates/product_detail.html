@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<p>You search for :<strong>{{ query }}</strong></p>
+{% if product %}
+    <ul>
+        <li><span>{{ product.name }}</span>
+            <span>{{ product.type }}</span>
+            <span>{{ product.price }}</span>
+            <span>{{ product.content }}</span>
+        <img src="{{ product.image_thumbnail.url }}"></li>
+    </ul>
+{% else %}
+    <p>No Product matched you search criteria.</p>
+{% endif %}
+<a href="/index" >返回列表</a>
+</body>
+</html>

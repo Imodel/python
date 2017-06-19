@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<p>添加商品</p>
+<form action="/add/" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <p>商品名称：<input type="text",name="name" /></p>
+    <p>商品价格：<input type="text",name="price" /></p>
+    <p>商品图片：<input type="file" name="image" /> </p>
+    <p>商品图片：<input type="text" name="type" /> </p>
+    <p>商品说明：<input type="text" name="content"/></p>
+    <input type="submit" value=" 添加">
+</form>
+<a href="/index" >返回列表</a>
+</body>
+</html>

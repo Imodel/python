@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<p>添加商品</p>
+<form action="/add/" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value=" 添加" />
+</form>
+<a href="/index" >返回列表</a>
+</body>
+</html>

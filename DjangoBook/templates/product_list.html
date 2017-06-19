@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<p>You search for :<strong>{{ query }}</strong>  <a href="/addHtml/">添加</a></p>
+{% if product_list %}
+    <ul>
+        {% for product in  product_list %}
+        <li><span><a href="/get/{{ product.id }}">{{ product.name }}</a></span>
+       <a href="/get/{{ product.id }}"> <img src="{{ product.image_thumbnail.url }}"></a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No books matched you search criteria.</p>
+{% endif %}
+</body>
+</html>
